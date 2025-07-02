@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="test-2.css">
+</head>
+<style>
+    * {
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+    
+
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.title:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+}
+
+.title:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 80px;
+    height: 5px;
+    background: #F9B500;
+    z-index: 1;
+}
+
+.article-title {
+    padding-top: 20px;
+}
+
+.article-title a {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-bar {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+}
+
+.info-bar li {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 25px;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.text-yellow {
+    color: #F9B500;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+b {
+    font-weight: 700;
+    transition: all .2s;
+}
+
+a:hover {
+    color: #F9B500;
+}
+
+a:hover>b {
+    color: #F9B500;
+}
+
+.app {
+    width: 100%;
+}
+
+@media (max-width:1199.98px) {
+    .app {
+        width: 992px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .app {
+        width: 768px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .app {
+        width: 576px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .app {
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+}
+
+.header-logo {
+    float: right;
+    margin: 30px 0;
+    height: 50px;
+}
+
+.header-menu {
+    float: right;
+}
+
+.header-menu-item {
+    display: inline;
+}
+
+.header-menu-item-link {
+    padding: 0 15px;
+    line-height: 80px;
+    font-weight: 700;
+    color: #333!important;
+}
+
+.header-menu-burger {
+    float: right;
+    display: none;
+    background-color: white;
+    border: none;
+    line-height: 80px;
+}
+
+.show {
+    display: inline-block!important;
+}
+
+@media (max-width:991.98px) {
+    .header-logo {
+        height: 15px;
+        margin: 32px 0;
+    }
+    .header-menu-item-link {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .header-menu-burger {
+        display: inline-block;
+    }
+    .header-menu {
+        display: none;
+        width: 100%;
+    }
+    .header-menu-item {
+        display: block;
+        border-bottom: 1px solid #cecece;
+    }
+}
+
+.btn{
+ background-color: #ffffff;
+ font-weight: 700;
+ color: #8089FF;
+ padding: 8px 12px;
+ border-radius: 20px;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+ -ms-border-radius: 20px;
+ -o-border-radius: 20px;
+}
+
+.min-text{
+    text-align: center;
+    color: #ebebeb;
+    font-size: 60px;
+    margin: 20px;
+
+}
+
+.min-text2{
+    text-align: center;
+    color: #ebebeb;
+    font-size:16.5 px;
+    margin: 20px;
+}
+.banner-img{
+    position: relative;
+    left: 15%;
+}
+
+.text-bold{
+    text-align: center;
+    color: #8089FF;
+   font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.gray{
+    background-color: #F6F7F8;
+    background-size: 100%;
+}
+.Description{
+    text-align: center;
+    color: #59687c;
+    margin-bottom: 90px;
+}
+
+header{
+    background-image: linear-gradient(to right, #8387FE, #FB80B7);
+    background-size:100%;
+    
+}
+
+.coll{ 
+    width: 1200px!important;
+}
+
+.btn2 {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 7px 15px rgba(0,9,128,.05), 0 12px 28px rgba(0,9,128,.075);
+    color: #8089ff;
+    text-align: center;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    font-weight: 700;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.btn-elec{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: #333;
+}
+
+.body-1-1{
+    width: 100% !important;
+}
+
+
+.body-1-2{
+    width: 1200px;
+    display: flex;
+}
+
+.icon-barg{
+    align-content: center;
+    display: block;
+    
+}
+.bfont{
+    font-size: 25px;
+    font-weight: 700;
+    color: #59687c;
+    margin-top: 30px;
+    gap: 20px;
+    text-align: center;
+}
+
+
+.sfont{
+    color: #708189;
+    align-self: center;
+}
+
+.table-el{
+    padding: 20px 30px;
+    text-align: center;
+}
+
+
+.body-1-1{
+    background-color:#F6F7F8 ;
+    
+}
+.inst{
+    width: 100%;
+}
+
+.pishnahhas{
+    background-color: #59687C;
+    text-align: center;
+    background-size: 100%;
+}
+
+.main-text{
+    text-align: center;
+    color: #ebebeb;
+    font-size: 40px;
+    margin: 20px;
+    padding: 100px 15px 40px;
+
+}
+
+.main-text2{
+    text-align: center;
+    color: #ebebeb;
+    font-size:16.5 px;
+    margin: 20px;
+    padding: 15px 15px 75px;
+}
+
+.btn3{
+            background-image: linear-gradient(to right, #82D37E, #27D8AC);
+            border: none;
+            font-weight: 700;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin:0px 30px  75px ;
+            align-items: center;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+}
+
+.products{
+    background-color:#F6F7F8 ;
+}
+
+.pen{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+}
+
+.hide{
+    display: none;
+}
+
+.blueback{
+    background-image: linear-gradient(to right, #77D6FF, #99A2FF);
+    text-align: center;
+}
+
+.form{
+
+    height: 70px;
+    width: 70px;
+}
+
+.pt{
+    color: #F6F7F8;
+    font-weight: 700;
+    margin: 20px 20px 0px ;
+    font-size: 20px;
+}
+.main-text3{
+    text-align: center;
+    color: #ebebeb;
+    font-size: 40px;
+    margin: 20px;
+    padding: 30px 15px 40px;
+}
+.crm-text{
+    text-align: right;
+}
+.crm-a{
+    color: #8089FF;
+    
+}
+
+
+.main-text4{
+    text-align: center;
+    color: #ebebeb;
+    font-size: 40px;
+    margin: 20px;
+    padding:20px 15px;
+}
+
+
+.p-signup{
+    background-image: linear-gradient(to right, #8387FE, #FB80B7);
+    text-align: center;
+}
+
+.btn4{
+    background-image: linear-gradient(to right, #77D6FF, #99A2FF);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:0px 30px  75px ;
+    align-items: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-weight: 600;
+}
+
+.navbar-brand{
+    float: right;
+    margin: 30px 0;
+    height: 50px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <img src="formAfzar-logo-white-fa (1).png" alt="" class="navbar-brand">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="header-menu" id="menu">
+                        <li class="header-menu-item"><a href="main.html" class="header-menu-item-link"> <button class="btn">ثبت نام</button></a></li>
+                        <li class="header-menu-item"><a href="main.html" class="header-menu-item-link"> <button class="btn"> ورود</button></a></li>
+                        <li class="header-menu-item"><a href="#" class="header-menu-item-link">اخبار</a></li>
+                        <li class="header-menu-item"><a href="#" class="header-menu-item-link">محصولات و دستاوردها</a></li>
+                        <li class="header-menu-item"><a href="#" class="header-menu-item-link">رویدادها</a></li>
+                        <li class="header-menu-item"><a href="#" class="header-menu-item-link">درباره ما</a></li>
+                     
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="banner clear-fix text-center">
+                <h1 class="min-text">فرم ساز آنلاین فرم افزار</h1>
+                <h4 class="min-text2">ابزاری آسان برای ساخت فرم های آنلاین قدرتمند بصورت حرفه‌ای</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <img src="form-register-event-fa.png" alt="form" class="img-fluid banner-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </header>
+    <div class="container">
+        <section class="body-1">
+            <div class="row">
+                <div class="gray">
+                <div class="col-md-6 body-1-1">
+                    <h1 class="text-bold text-center">فرم ساز آنلاین قابل استفاده برای تمامی کسب و کارها</h1>
+                    <h4 class="Description text-center"> به آسانی و کمتر از چند دقیقه، با بیش از 30 ابزار طراحی
+                        و دهها ابزارک
+                        موجود <br>در فرم ساز، فرم دلخواهتون رو طراحی و به اشتراک بگذارید</h4>
+                </div>
+                </div>
+        
+        <div>
+            <div class="pishnahhas">
+                <h1 class="main-text">منتظر چی هستین، همین حالا اولین فرم خودتون رو با فرم ساز ایجاد کنین</h1>
+                <h4 class="main-text2">قالب فرم‌های آماده در فرم‌افزار شما را در ساخت آسانتر فرم های<br> استاندارد با ابزارهای متنوع یاری می‌کند&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</h4>
+                <button class="btn3"><a href="form.html">فرم خودت رو بساز</a>   </button>
+                <button class="btn3">آزمون ساز</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="products">
+                <table>
+                    <tr>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                    </tr>
+                    <tr class="last">
+                        <th class="table-el" >
+                            <th class="table-el hide" >
+                                <img src="pencil.png" alt=" pen" class="pen">
+                                <br>
+                                <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                                <br>
+                                <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+    
+                            </th>
+
+                        </th>
+                        <th class="table-el" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                        <th class="table-el hide" >
+                            <img src="pencil.png" alt=" pen" class="pen">
+                            <br>
+                            <a href="#" class="bfont"> استفاده آسان در وردپرس و جوملا</a>
+                            <br>
+                            <a href="#" class="sfont" > &nbsp; &nbsp;&nbsp;توسط افزونه وردپرس و جوملا، بدون نیاز به دانش فنی <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbspو کدنویسی، فرم‌ها را در وبسایت خود قرار دهید</a>
+
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="blueback">
+            <h1 class="main-text">فرم افزار با افتخار در کنار کسب و کار شما  </h1>
+            <table>
+                <tr>
+                    <th class="table-el" >
+                        <img src="form.png" alt="form" class="form">
+                        <p class="pt">اطلاعات ثبت شده</p>
+                        <p class="main-text3">بیش از 29,600,000</p>
+
+                    </th>
+                    <th class="table-el" >
+                        <img src="form.png" alt="form" class="form">
+                        <p class="pt">اطلاعات ثبت شده</p>
+                        <p class="main-text3">بیش از 29,600,000</p>
+
+                    </th>
+                </tr>
+            </table>
+            
+            
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>
+                    <img src="crm.png" alt="crm">
+                    </th>
+                    <th class="crm-text">
+                        <h1 class="bold-dark">انتقال اطلاعات به CRM</h1>
+                        <h3 class="Description">امکانات بیشتری می‌خواهید؟ مدیریت مشتری، گردش‌کار، زمانبندی،<br> مدیریت فروش، باشگاه مشتری، سامانه ایمیل و پیامک و... همراه با<br> فرمساز پیشرفته درون CRM داشته باشید.</h3>
+                        <a href="#" class="crm-a">مشاهده دموی نرم افزار CRM</a>
+                    </th>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="p-signup">
+            <h1 class="main-text4">ثبت نام رایگان در فرم افزار  </h1>
+            <h1 class="main-text4">همین الان اولین فرم خود را با فرم افزار طراحی کنید   </h1>
+            <button class="btn4">ثبت نام  </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script>
+        function showMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.className === "header-menu") {
+                menu.className += " show";
+            } else {
+                menu.className = "header-menu";
+            }
+        }
+    </script>
+</body>
+
+</html>

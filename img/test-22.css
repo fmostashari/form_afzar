@@ -1,0 +1,276 @@
+* {
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+    
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.title:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+}
+
+.title:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 80px;
+    height: 5px;
+    background: #F9B500;
+    z-index: 1;
+}
+
+.article-title {
+    padding-top: 20px;
+}
+
+.article-title a {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-bar {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+}
+
+.info-bar li {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 25px;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.text-yellow {
+    color: #F9B500;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+b {
+    font-weight: 700;
+    transition: all .2s;
+}
+
+a:hover {
+    color: #F9B500;
+}
+
+a:hover>b {
+    color: #F9B500;
+}
+
+.app {
+    width: 100%;
+}
+
+@media (max-width:1199.98px) {
+    .app {
+        width: 992px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .app {
+        width: 768px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .app {
+        width: 576px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .app {
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+}
+
+.header-logo {
+    
+    margin: 30px 0;
+    height: 50px;
+}
+
+
+
+.header-menu-item {
+    display: inline;
+}
+
+.header-menu-item-link {
+    padding: 0 15px;
+    line-height: 80px;
+    font-weight: 700;
+    color: #333!important;
+}
+
+.header-menu-burger {
+    float: right;
+    display: none;
+    background-color: white;
+    border: none;
+    line-height: 80px;
+}
+
+.show {
+    display: inline-block!important;
+}
+
+@media (max-width:991.98px) {
+    .header-logo {
+        height: 15px;
+        margin: 32px 0;
+    }
+    .header-menu-item-link {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .header-menu-burger {
+        display: inline-block;
+    }
+    .header-menu {
+        display: none;
+        width: 100%;
+    }
+    .header-menu-item {
+        display: block;
+        border-bottom: 1px solid #cecece;
+    }
+}
+
+.btn{
+ background-color: #ffffff;
+ font-weight: 700;
+ color: #8089FF;
+ padding: 8px 12px;
+ border-radius: 20px;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+ -ms-border-radius: 20px;
+ -o-border-radius: 20px;
+}
+
+.min-text{
+    text-align: center;
+    color: #ebebeb;
+    font-size: 60px;
+    margin: 20px;
+
+}
+
+.min-text2{
+    text-align: center;
+    color: #ebebeb;
+    font-size:16.5 px;
+    margin: 20px;
+}
+.banner-img{
+    position: relative;
+    left: 15%;
+}
+
+.text-bold{
+    text-align: center;
+    color: #8089FF;
+   font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.Description{
+    text-align: center;
+    color: #59687c;
+    margin-bottom: 90px;
+}
+
+header{
+    background-image: url(img/gradiant.png)!important;
+    background-size:100%;
+    
+}
+
+
+
+.btn2 {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 7px 15px rgba(0,9,128,.05), 0 12px 28px rgba(0,9,128,.075);
+    color: #8089ff;
+    text-align: center;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    font-weight: 700;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.btn-elec{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: #333;
+}
+
+
+.body-1-2{
+    width: 1200px;
+    display: flex;
+}
+
+.icon-barg{
+    align-content: center;
+    
+}
